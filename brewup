@@ -2,7 +2,7 @@
 #set -u
 #set -x
 
-
+trap "echo Exited!; exit;" SIGINT SIGTERM
 
 #brew inventory list
 INVENTORY=(
@@ -105,21 +105,13 @@ INVENTORY=(
          fi
    }
 
-   function updatBrew() {
-         if [ ! -e "$BREW" ]       # Check if file exists.
-            then instBrew
-         else
-            /usr/local/bin/brew upgrade
-         fi
-   }
-
    function instInv () {
          for u in ${INVENTORY[@]}
             do /usr/local/bin/brew install "${u}"
-         done
+	 done
    }
 
 printf '%s\n' "${INVENTORY[@]}"
 
-updatBrew;
+instBrew;
 instInv;
