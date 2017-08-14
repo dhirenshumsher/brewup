@@ -2,7 +2,7 @@
 #set -u
 #set -x
 
-trap "echo Exited!; exit;" SIGINT SIGTERM
+trap "exit;" SIGINT SIGTERM
 
 #brew inventory list
 INVENTORY=(
