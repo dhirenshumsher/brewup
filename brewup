@@ -1,0 +1,125 @@
+#!/usr/bin/env bash
+#set -u
+#set -x
+
+
+
+#brew inventory list
+INVENTORY=(
+      'ab'
+      'ansible'
+      'ansible-cmdb'
+      'apr'
+      'apr-util'
+      'asciinema'
+      'autoconf'
+      'automake'
+      'awscli'
+      'azure-cli'
+      'bash'
+      'bash-completion'
+      'bats'
+      'bbl'
+      'boost'
+      'bosh-cli'
+      'bosh-init'
+      'cf-cli'
+      'consul'
+      'credhub-cli'
+      'cucumber-cpp'
+      'delve'
+      'docker'
+      'erlang'
+      'etcd'
+      'gdbm'
+      'gettext'
+      'gitlab-ci-multi-runner'
+      'glib'
+      'glide'
+      'gnu-sed'
+      'go'
+      'godep'
+      'gradle'
+      'groovy'
+      'haproxy'
+      'htop'
+      'hugo'
+      'icu4c'
+      'jpeg'
+      'kubernetes-cli'
+      'kubernetes-helm'
+      'libevent'
+      'libffi'
+      'libpng'
+      'libssh2'
+      'libtiff'
+      'libtool'
+      'libyaml'
+      'lynx'
+      'maven'
+      'midnight-commander'
+      'nginx'
+      'nmap'
+      'node'
+      'nomad'
+      'openssl'
+      'openssl@1.1'
+      'packer'
+      'pcre'
+      'pkg-config'
+      'python'
+      'python3'
+      'ranger'
+      'readline'
+      'redis'
+      's-lang'
+      'sbt'
+      'scala'
+      'springboot'
+      'sqlite'
+      'squid'
+      'ssh-copy-id'
+      'sshfs'
+      'supervisor'
+      'terraform'
+      'the_silver_searcher'
+      'thefuck'
+      'tmux'
+      'tree'
+      'vault'
+      'watch'
+      'watchexec'
+      'watchman'
+      'wget'
+      'wxmac'
+      'xz'
+      )
+
+
+   function instBrew (){
+      #check is brew is installed, if not then install
+         if [ ! -f "/usr/local/bin/brew" ]       # Check if file exists.
+            then
+         #   eval "$HOMEBREW[$@]"
+             /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+         fi
+   }
+
+   function updatBrew() {
+         if [ ! -e "$BREW" ]       # Check if file exists.
+            then instBrew
+         else
+            /usr/local/bin/brew upgrade
+         fi
+   }
+
+   function instInv () {
+         for u in ${INVENTORY[@]}
+            do /usr/local/bin/brew install "${u}"
+         done
+   }
+
+printf '%s\n' "${INVENTORY[@]}"
+
+updatBrew;
+instInv;
