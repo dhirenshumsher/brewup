@@ -28,6 +28,7 @@ INVENTORY=(
       'credhub-cli'
       'cucumber-cpp'
       'delve'
+      'dnstop'
       'docker'
       'erlang'
       'etcd'
