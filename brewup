@@ -47,6 +47,7 @@ INVENTORY=(
       'hugo'
       'icu4c'
       'jpeg'
+      'juju'
       'kubernetes-cli'
       'kubernetes-helm'
       'libevent'
