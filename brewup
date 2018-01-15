@@ -58,6 +58,7 @@ INVENTORY=(
          groovy
          haproxy
          htop
+         hub
          hugo
          icu4c
          influxdb
