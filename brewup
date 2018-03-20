@@ -6,48 +6,30 @@ trap "exit;" SIGINT SIGTERM
 
 #brew inventory list
 INVENTORY=(
-openssl
-openssl@1.1
-packer
-pcre
-pkg-config
-python
-python3
-ranger
-readline
-reattach-to-user-namespace
-redis
-rsync
-ruby
-s-lang
-sbt
-scala
-snort
-springboot
-sqlite
-squid
-ssh-copy-id
-sshfs
-supervisor
-terraform
-terraform-inventory
-terragrunt
-the_silver_searcher
-thefuck
-tmux
-traefik
-trash-cli
-tree
-vault
-watch
-watchexec
-watchman
-webp
-wget
-wxmac
-xz
-zsh
-zsh-completions      
+ansible				etcd				kapacitor			node				supervisor
+ansible-cmdb			fontconfig			kompose				nomad				terraform
+apr				fpp				kops				nsq				terraform-inventory
+apr-util			freetype			kubernetes-cli			openssl				terragrunt
+asciinema			gd				kubernetes-helm			openssl@1.1			the_silver_searcher
+atool				gdbm				libdnet				packer				thefuck
+autoconf			gettext				libevent			pcre				tmux
+automake			git				libffi				pkg-config			traefik
+awscli				gitlab-runner			libgpg-error			python				trash-cli
+azure-cli			glib				libidn2				python3				tree
+bash				glide				libksba				python@2			vault
+bash-completion			gnu-sed				libpng				ranger				watch
+bats				go				libssh2				readline			watchexec
+boost				go-jira				libtiff				reattach-to-user-namespace	watchman
+boost@1.60			godep				libtool				redis				webp
+chronograf			graphviz			libunistring			rsync				wget
+consul				groovy				libyaml				ruby				wxmac
+coreutils			haproxy				luajit				s-lang				xz
+cucumber-cpp			htop				lynx				sbt				zookeeper
+daq				hugo				midnight-commander		scala				zsh
+dep				icu4c				nano				snort				zsh-completions
+docker				influxdb			ncurses				sqlite
+docker-compose-completion	jpeg				nginx				squid
+erlang				juju				nmap				ssh-copy-id
 )
 
 
