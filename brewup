@@ -29,7 +29,8 @@ daq				hugo				midnight-commander		scala				zsh
 dep				icu4c				nano				snort				zsh-completions
 docker				influxdb			ncurses				sqlite
 docker-compose-completion	jpeg				nginx				squid
-erlang				juju				nmap				ssh-copy-id
+erlang				juju				nmap				ssh-copy-id 
+caskroom/cask/vagrant-manager  caskroom/cask/vagrant            jq
 )
 
 
